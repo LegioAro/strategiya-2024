@@ -1,0 +1,1 @@
+# strategiya-2024
