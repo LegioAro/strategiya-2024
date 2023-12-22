@@ -1,0 +1,121 @@
+.skils {
+  padding-bottom: 140px;
+  padding-top: 118px;
+  background-image: url(../img/skils/bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  background-color: #0d0d0d;
+  &__wrapper {
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+  }
+
+  &__items-wrapper {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto 40px;
+  }
+
+  &__items--shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    border: 1px solid #be8d34;
+    background-image: linear-gradient(274deg, #be8d34 -14.04%, #fee3b2 215.29%);
+    filter: blur(18px);
+  }
+
+  &__items {
+    position: relative;
+    z-index: 1;
+    padding: 54px 62px;
+    border-radius: 10px;
+    border: 1px solid #be8d34;
+    background-image: linear-gradient(180deg, #1f1d1d 0%, #2e2e2e 136.85%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 24px;
+  }
+
+  &__items-block {
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 34px;
+    font-size: 18px;
+    line-height: 120%; /* 21.6px */
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background-image: url(../img/icons/list-item.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__items-decor {
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 50%;
+    top: -44px;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__text {
+    margin-bottom: 34px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 120%; /* 21.6px */
+  }
+
+  &__btn {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .skils {
+    padding-bottom: 80px;
+    &__items {
+      padding: 50px 20px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .skils {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
