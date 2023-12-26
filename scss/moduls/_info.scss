@@ -2,18 +2,41 @@
   &__date-wrapper {
   }
 
+  &__date-title-block {
+    margin: 0 auto 32px;
+    max-width: fit-content;
+    position: relative;
+  }
+
+  &__date-title-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.356px;
+    border: 0.836px solid #be8d34;
+    background-image: linear-gradient(274deg, #be8d34 -14.04%, #fee3b2 215.29%);
+    filter: blur(15.040214538574219px);
+
+    display: none;
+  }
+
   &__date-title {
     text-align: center;
     font-size: 23px;
     letter-spacing: 9.2px;
     text-transform: uppercase;
-    max-width: fit-content;
-    margin: 0 auto 32px;
 
-    background-image: linear-gradient(90deg, #5b5b5b 0%, #fff 45.67%, #5b5b5b 88.57%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    p {
+      background-image: linear-gradient(90deg, #5b5b5b 0%, #fff 45.67%, #5b5b5b 88.57%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__date-items {
@@ -81,10 +104,19 @@
 
 @media (max-width: 768px) {
   .info {
+    &__date-title-block {
+      margin-bottom: 30px;
+    }
+    &__date-title-bg {
+      display: block;
+    }
     &__date-title {
       font-size: 18px;
       letter-spacing: 5px;
-      margin-bottom: 30px;
+      padding: 20px 20px;
+      border-radius: 8.356px;
+      border: 0.836px solid #be8d34;
+      background-image: linear-gradient(180deg, #1f1d1d 0%, #2e2e2e 136.85%);
     }
 
     &__date-item {
